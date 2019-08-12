@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Barcelona</title>
+    <link rel="apple-touch-icon" href="apple-touch-icon.png" />
+    <!-- Place favicon.ico in the root directory -->
+    <!-- build:css styles/main.css -->
+    <link rel="stylesheet" href="styles/main.css" />
+    <!-- endbuild -->
+  </head>
+  <body>
+    <!--[if IE]>
+      <p class="browserupgrade">
+        You are using an <strong>outdated</strong> browser. Please
+        <a href="http://browsehappy.com/">upgrade your browser</a> to improve
+        your experience.
+      </p>
+    <![endif]-->
+
+    <!-- Header Start -->
+    <header class="header header--home">
+      <div class="container container--fluid">
+        <div class="row">
+          <div class="col">
+            <div class="header__logo">
+              <a href="/" class="logo" title="Barcelona"></a>
+            </div>
+          </div>
+          <div class="col">
+            <nav class="navigation">
+              <ul class="navigation__list">
+                <li class="navigation__item">
+                  <a href="/" class="navigation__link">Home</a>
+                </li>
+                <li class="navigation__item">
+                  <a href="/about.html" class="navigation__link">About Us</a>
+                </li>
+                <li class="navigation__item">
+                  <a href="/menu.html" class="navigation__link">Menu</a>
+                </li>
+                <li class="navigation__item">
+                  <a href="/news.html" class="navigation__link">News</a>
+                </li>
+                <li class="navigation__item">
+                  <a href="/contact.html" class="navigation__link">Contact</a>
+                </li>
+                <li class="navigation__item">
+                  <a href="/reservation.html" class="navigation__link"
+                    >Reservation</a
+                  >
+                </li>
+                <li class="navigation__item">
+                  <ul class="lang-switcher">
+                    <li class="lang-switcher__item">
+                      <a href="#" class="lang-switcher__link">中</a>
+                    </li>
+                    <li class="lang-switcher__item">
+                      <a href="#" class="lang-switcher__link">EN</a>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </header>
+    <!-- Header End -->
+
+    <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+    <script>
+      (function(b, o, i, l, e, r) {
+        b.GoogleAnalyticsObject = l;
+        b[l] ||
+          (b[l] = function() {
+            (b[l].q = b[l].q || []).push(arguments);
+          });
+        b[l].l = +new Date();
+        e = o.createElement(i);
+        r = o.getElementsByTagName(i)[0];
+        e.src = 'https://www.google-analytics.com/analytics.js';
+        r.parentNode.insertBefore(e, r);
+      })(window, document, 'script', 'ga');
+      ga('create', 'UA-XXXXX-X');
+      ga('send', 'pageview');
+    </script>
+    <!-- build:js scripts/vendor.js -->
+    <script
+      type="text/javascript"
+      src="/node_modules/jquery/dist/jquery.min.js"
+    ></script>
+    <!-- endbuild -->
+    <!-- build:js scripts/main.js -->
+    <script src="scripts/main.js"></script>
+    <!-- endbuild -->
+  </body>
+</html>
