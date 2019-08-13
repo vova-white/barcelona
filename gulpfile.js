@@ -6,6 +6,8 @@ const del = require('del');
 const autoprefixer = require('autoprefixer');
 const cssnano = require('cssnano');
 const { argv } = require('yargs');
+const injectSvg = require('gulp-inject-svg');
+const injectSvgOptions = { base: '/app/' };
 
 const $ = gulpLoadPlugins();
 const server = browserSync.create();
@@ -20,18 +22,20 @@ function styles() {
   return src('app/styles/*.scss')
     .pipe($.plumber())
     .pipe($.if(!isProd, $.sourcemaps.init()))
-    .pipe($.sass.sync({
-      outputStyle: 'expanded',
-      precision: 10,
-      includePaths: ['.']
-    }).on('error', $.sass.logError))
-    .pipe($.postcss([
-      autoprefixer()
-    ]))
+    .pipe(
+      $.sass
+        .sync({
+          outputStyle: 'expanded',
+          precision: 10,
+          includePaths: ['.']
+        })
+        .on('error', $.sass.logError)
+    )
+    .pipe($.postcss([autoprefixer()]))
     .pipe($.if(!isProd, $.sourcemaps.write()))
     .pipe(dest('.tmp/styles'))
-    .pipe(server.reload({stream: true}));
-};
+    .pipe(server.reload({ stream: true }));
+}
 
 function scripts() {
   return src('app/scripts/**/*.js')
@@ -40,41 +44,46 @@ function scripts() {
     .pipe($.babel())
     .pipe($.if(!isProd, $.sourcemaps.write('.')))
     .pipe(dest('.tmp/scripts'))
-    .pipe(server.reload({stream: true}));
-};
-
+    .pipe(server.reload({ stream: true }));
+}
 
 const lintBase = files => {
   return src(files)
     .pipe($.eslint({ fix: true }))
-    .pipe(server.reload({stream: true, once: true}))
+    .pipe(server.reload({ stream: true, once: true }))
     .pipe($.eslint.format())
     .pipe($.if(!server.active, $.eslint.failAfterError()));
-}
+};
 function lint() {
-  return lintBase('app/scripts/**/*.js')
-    .pipe(dest('app/scripts'));
-};
+  return lintBase('app/scripts/**/*.js').pipe(dest('app/scripts'));
+}
 function lintTest() {
-  return lintBase('test/spec/**/*.js')
-    .pipe(dest('test/spec'));
-};
+  return lintBase('test/spec/**/*.js').pipe(dest('test/spec'));
+}
 
 function html() {
   return src('app/*.html')
-    .pipe($.useref({searchPath: ['.tmp', 'app', '.']}))
-    .pipe($.if(/\.js$/, $.uglify({compress: {drop_console: true}})))
-    .pipe($.if(/\.css$/, $.postcss([cssnano({safe: true, autoprefixer: false})])))
-    .pipe($.if(/\.html$/, $.htmlmin({
-      collapseWhitespace: true,
-      minifyCSS: true,
-      minifyJS: {compress: {drop_console: true}},
-      processConditionalComments: true,
-      removeComments: true,
-      removeEmptyAttributes: true,
-      removeScriptTypeAttributes: true,
-      removeStyleLinkTypeAttributes: true
-    })))
+    .pipe(injectSvg(injectSvgOptions))
+    .pipe($.useref({ searchPath: ['.tmp', 'app', '.'] }))
+    .pipe($.if(/\.js$/, $.uglify({ compress: { drop_console: true } })))
+    .pipe(
+      $.if(/\.css$/, $.postcss([cssnano({ safe: true, autoprefixer: false })]))
+    )
+    .pipe(
+      $.if(
+        /\.html$/,
+        $.htmlmin({
+          collapseWhitespace: true,
+          minifyCSS: true,
+          minifyJS: { compress: { drop_console: true } },
+          processConditionalComments: true,
+          removeComments: true,
+          removeEmptyAttributes: true,
+          removeScriptTypeAttributes: true,
+          removeStyleLinkTypeAttributes: true
+        })
+      )
+    )
     .pipe(dest('dist'));
 }
 
@@ -82,29 +91,26 @@ function images() {
   return src('app/images/**/*', { since: lastRun(images) })
     .pipe($.imagemin())
     .pipe(dest('dist/images'));
-};
+}
 
 function fonts() {
-  return src('app/fonts/**/*.{eot,svg,ttf,woff,woff2}')
-    .pipe($.if(!isProd, dest('.tmp/fonts'), dest('dist/fonts')));
-};
+  return src('app/fonts/**/*.{eot,svg,ttf,woff,woff2,otf}').pipe(
+    $.if(!isProd, dest('.tmp/fonts'), dest('dist/fonts'))
+  );
+}
 
 function extras() {
-  return src([
-    'app/*',
-    '!app/*.html'
-  ], {
+  return src(['app/*', '!app/*.html'], {
     dot: true
   }).pipe(dest('dist'));
-};
+}
 
 function clean() {
-  return del(['.tmp', 'dist'])
+  return del(['.tmp', 'dist']);
 }
 
 function measureSize() {
-  return src('dist/**/*')
-    .pipe($.size({title: 'build', gzip: true}));
+  return src('dist/**/*').pipe($.size({ title: 'build', gzip: true }));
 }
 
 const build = series(
@@ -131,11 +137,10 @@ function startAppServer() {
     }
   });
 
-  watch([
-    'app/*.html',
-    'app/images/**/*',
-    '.tmp/fonts/**/*'
-  ]).on('change', server.reload);
+  watch(['app/*.html', 'app/images/**/*', '.tmp/fonts/**/*']).on(
+    'change',
+    server.reload
+  );
 
   watch('app/styles/**/*.scss', styles);
   watch('app/scripts/**/*.js', scripts);
@@ -176,7 +181,12 @@ function startDistServer() {
 
 let serve;
 if (isDev) {
-  serve = series(clean, parallel(styles, scripts, fonts), startAppServer);
+  serve = series(
+    clean,
+    parallel(styles, scripts, fonts),
+    injectSvgFunc,
+    startAppServer
+  );
 } else if (isTest) {
   serve = series(clean, scripts, startTestServer);
 } else if (isProd) {

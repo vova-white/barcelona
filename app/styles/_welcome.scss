@@ -1,0 +1,42 @@
+.welcome {
+  padding: rem-px(80) 0;
+
+  &__article {
+  }
+
+  &__image {
+    line-height: 0;
+  }
+
+  &__inner {
+    background: $blue;
+    color: #fff;
+    padding: rem-px(40) rem-px($container-padding-x);
+
+    &--yellow {
+      background: $yellow;
+      color: $textColor;
+    }
+
+    p:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &__title {
+    margin: 0 0 20/48 * 1em;
+    font-family: $accentFont;
+    @include font-rem-px(48);
+    line-height: 60/48 * 1em;
+    font-weight: 500;
+  }
+
+  &__text {
+    font-weight: 500;
+    margin-bottom: rem-px($container-padding-x);
+
+    a {
+      color: $textColor;
+    }
+  }
+}

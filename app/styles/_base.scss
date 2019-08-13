@@ -1,0 +1,74 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+:root {
+  font-size: 12px;
+
+  @include media-breakpoint-up(md) {
+    font-size: 15px;
+  }
+}
+
+body {
+  font-family: $basicFont;
+  @include font-rem-px(15);
+  line-height: 24 / $basicFontSize;
+  color: $textColor;
+
+  &.is--scroll_off {
+    overflow: hidden;
+  }
+}
+
+a {
+  text-decoration: none;
+  color: $orange;
+  transition: all 0.25s ease-in-out;
+
+  &:hover {
+    color: darken($orange, 10);
+  }
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+.container {
+  width: 100%;
+  max-width: 1124px;
+  margin: 0 auto;
+  padding: 0 rem-px($container-padding-x);
+  &--fluid {
+    max-width: 100%;
+  }
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: rem-px(-$container-padding-x);
+  margin-left: rem-px(-$container-padding-x);
+  &--justify_between {
+    justify-content: space-between;
+  }
+}
+
+.col {
+  position: relative;
+  width: 100%;
+  padding-right: rem-px($container-padding-x);
+  padding-left: rem-px($container-padding-x);
+  flex-basis: 0;
+  flex-grow: 1;
+  max-width: 100%;
+
+  &--auto {
+    flex: 0 0 auto;
+    width: auto;
+  }
+}

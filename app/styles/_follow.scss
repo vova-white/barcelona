@@ -1,0 +1,43 @@
+.follow {
+  background: url(../images/follow__bg.jpg) no-repeat center;
+  background-size: cover;
+  padding: rem-px(80) 0;
+  &__title {
+    margin: 0;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+    color: #ffffff;
+    font-family: $accentFont;
+    @include font-rem-px(30);
+    line-height: 1;
+  }
+}
+
+.social {
+  &__item {
+  }
+
+  &__icon {
+    display: inline-block;
+    line-height: 0;
+    width: rem-px(97);
+    height: rem-px(97);
+    border: 5px solid #ffffff;
+    border-radius: 50%;
+
+    &--fb {
+      background-color: rgba(#1877f2, 0.9);
+    }
+
+    &--instagram {
+      background-color: rgba(#c32aa3, 0.9);
+    }
+
+    &--dianping {
+      background-color: rgba(#ff6633, 0.9);
+    }
+
+    &--tripadvisor {
+      background-color: rgba(#00af87, 0.9);
+    }
+  }
+}

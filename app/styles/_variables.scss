@@ -1,0 +1,32 @@
+$textColor: rgba(0, 0, 0, 0.85);
+$orange: #e8753d;
+$blue: #43558a;
+$yellow: #f9de4f;
+
+$basicFont: Helvetica, 'Helvetica Neue', Arial, sans-serif;
+$accentFont: 'BrushScriptStd', serif;
+$basicFontSize: 15;
+
+// Grid columns
+//
+// Set the number of columns and specify the width of the gutters.
+
+$grid-columns: 12 !default;
+$grid-gutter-width: 40 !default;
+
+// Container padding
+
+$container-padding-x: $grid-gutter-width / 2 !default;
+
+// Grid breakpoints
+//
+// Define the minimum dimensions at which your layout will change,
+// adapting to different screen sizes, for use in media queries.
+
+$grid-breakpoints: (
+  xs: 0,
+  sm: 568px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px
+) !default;
