@@ -19,6 +19,7 @@
   &__item {
     margin: rem-px($container-padding-x);
     display: inline-block;
+    vertical-align: middle;
   }
 
   &__icon {
@@ -33,8 +34,7 @@
 
     &--fb {
       background: rgba(#1877f2, 0.9);
-      img,
-      svg {
+      .inline-svg {
         width: rem-px(21);
         height: rem-px(55);
       }
@@ -45,8 +45,7 @@
 
     &--instagram {
       background: rgba(#c32aa3, 0.9);
-      img,
-      svg {
+      .inline-svg {
         width: rem-px(52);
         height: rem-px(54);
       }
@@ -57,10 +56,9 @@
 
     &--dianping {
       background: rgba(#ff6633, 0.9);
-      img,
-      svg {
-        width: rem-px(65);
-        height: rem-px(62);
+      .inline-svg {
+        width: rem-px(60);
+        height: rem-px(64);
       }
       &:hover {
         background: #ff6633;
@@ -69,10 +67,9 @@
 
     &--tripadvisor {
       background: rgba(#00af87, 0.9);
-      img,
-      svg {
+      .inline-svg {
         width: rem-px(68);
-        height: rem-px(41);
+        height: rem-px(43);
       }
       &:hover {
         background: #00af87;

@@ -6,8 +6,8 @@ const del = require('del');
 const autoprefixer = require('autoprefixer');
 const cssnano = require('cssnano');
 const { argv } = require('yargs');
-const injectSvg = require('gulp-inject-svg');
-const injectSvgOptions = { base: '/app/' };
+const embedSvg = require('gulp-embed-svg');
+const injectSvgOptions = { root: 'app/', selectors: '.inline-svg' };
 
 const $ = gulpLoadPlugins();
 const server = browserSync.create();
@@ -63,7 +63,7 @@ function lintTest() {
 
 function html() {
   return src('app/*.html')
-    .pipe(injectSvg(injectSvgOptions))
+    .pipe(embedSvg(injectSvgOptions))
     .pipe($.useref({ searchPath: ['.tmp', 'app', '.'] }))
     .pipe($.if(/\.js$/, $.uglify({ compress: { drop_console: true } })))
     .pipe(
@@ -105,6 +105,12 @@ function extras() {
   }).pipe(dest('dist'));
 }
 
+function embedSvgTask() {
+  return src('app/*.html')
+    .pipe(embedSvg(injectSvgOptions))
+    .pipe(dest('.tmp'));
+}
+
 function clean() {
   return del(['.tmp', 'dist']);
 }
@@ -126,6 +132,8 @@ const build = series(
 );
 
 function startAppServer() {
+  embedSvgTask();
+
   server.init({
     notify: false,
     port,
@@ -181,12 +189,7 @@ function startDistServer() {
 
 let serve;
 if (isDev) {
-  serve = series(
-    clean,
-    parallel(styles, scripts, fonts),
-    injectSvgFunc,
-    startAppServer
-  );
+  serve = series(clean, parallel(styles, scripts, fonts), startAppServer);
 } else if (isTest) {
   serve = series(clean, scripts, startTestServer);
 } else if (isProd) {
