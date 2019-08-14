@@ -4,6 +4,71 @@
   background: url(../images/body--top.svg) repeat-x;
   background-size: auto rem-px(20);
   z-index: 5;
+  @include media-breakpoint-up(md) {
+    padding-top: rem-px(40);
+  }
+
+  &__row {
+    align-items: center;
+  }
+
+  &__logo {
+    min-width: 160px;
+    width: (238+2 * $container-padding-x)/1440 * 100%;
+    max-width: (238 + 2 * $container-padding-x) * 1px;
+    .firs-letter,
+    .logo-b,
+    .logo-word {
+      fill: $blue;
+      transition: fill 0.25s ease-in-out;
+    }
+    a {
+      display: block;
+      line-height: 0;
+      &:hover {
+        .firs-letter,
+        .logo-b,
+        .logo-word {
+          fill: $orange;
+          transition: fill 0.25s ease-in-out;
+        }
+      }
+    }
+  }
+
+  .burger__line {
+    background: $textColor;
+  }
+
+  &--home {
+    @include media-breakpoint-up(md) {
+      padding-top: rem-px(60);
+    }
+    .header {
+      &__logo {
+        display: none;
+      }
+    }
+    .navigation {
+      @include media-breakpoint-up(md) {
+        &__link {
+          color: #fff;
+          &:hover {
+            color: $orange;
+          }
+          &--button {
+            &:hover {
+              color: #fff;
+            }
+          }
+        }
+      }
+    }
+
+    .burger__line {
+      background: #fff;
+    }
+  }
 }
 
 .navigation {
@@ -19,9 +84,6 @@
   overflow: auto;
   &--is_open {
     transform: translate3d(0, 0, 0);
-    @include media-breakpoint-up(lg) {
-      display: none;
-    }
   }
 
   &__list {
@@ -55,6 +117,42 @@
       }
     }
   }
+
+  @include media-breakpoint-up(md) {
+    position: relative;
+    top: 0;
+    transition: none;
+    transform: translate3d(0, 0, 0);
+    background: transparent;
+
+    &__list {
+      margin: 0;
+      padding: 0;
+      display: flex;
+      align-items: center;
+    }
+
+    &__item {
+      display: block;
+      padding: 0;
+    }
+
+    &__link {
+      @include font-rem-px(13);
+      font-size: 16/1200 * 100vw;
+      padding: rem-px(7) 15px rem-px(5);
+      &--button {
+        margin: 0 15px 0;
+        padding: rem-px(7) 15px rem-px(5);
+      }
+    }
+  }
+
+  @include media-breakpoint-up(xl) {
+    &__link {
+      @include font-rem-px(16);
+    }
+  }
 }
 
 .lang-switcher {
@@ -70,6 +168,24 @@
 
   &__link {
     @extend .navigation__link;
+  }
+
+  @include media-breakpoint-up(md) {
+    margin: 0;
+    padding: 0;
+    border-top: 0;
+
+    &__link {
+      padding: 0 7px;
+    }
+
+    &__item:first-child .lang-switcher__link {
+      padding-left: 15px;
+    }
+
+    &__item:last-child .lang-switcher__link {
+      padding-right: 0;
+    }
   }
 }
 
@@ -129,5 +245,9 @@
         left: 50%;
       }
     }
+  }
+
+  @include media-breakpoint-up(md) {
+    display: none;
   }
 }

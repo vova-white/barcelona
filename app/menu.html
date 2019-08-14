@@ -4,7 +4,7 @@
     <meta charset="utf-8" />
     <meta name="description" content="" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Barcelona</title>
+    <title>Menu | Barcelona</title>
     <link rel="apple-touch-icon" href="apple-touch-icon.png" />
     <!-- Place favicon.ico in the root directory -->
     <!-- build:css styles/main.css -->
@@ -20,217 +20,366 @@
       </p>
     <![endif]-->
 
-    <!-- Promo Start -->
-    <div class="promo">
-      <!-- Header Start -->
-      <header class="header header--home">
-        <div class="container container--fluid">
-          <div class="row row--justify_between">
-            <div class="col col--auto">
-              <div class="header__logo">
-                <a href="/" class="logo" title="Barcelona"></a>
+    <!-- Header Start -->
+    <header class="header">
+      <div class="container container--fluid">
+        <div class="row row--justify_between header__row">
+          <div class="col col--auto header__logo">
+            <a href="/" title="Barcelona">
+              <svg
+                class="inline-svg"
+                src="images/logo--white.svg"
+                width="614"
+                height="282"
+                alt="Barcelona Logo"
+              ></svg>
+            </a>
+          </div>
+          <div class="col col--auto">
+            <button class="burger burger--js">
+              <span class="burger__line"></span>
+              <span class="burger__line"></span>
+              <span class="burger__line"></span>
+              <span class="burger__line"></span>
+            </button>
+            <nav class="navigation navigation--js">
+              <ul class="navigation__list">
+                <li class="navigation__item">
+                  <a href="/" class="navigation__link">Home</a>
+                </li>
+                <li class="navigation__item">
+                  <a href="/about.html" class="navigation__link">About Us</a>
+                </li>
+                <li class="navigation__item">
+                  <a href="/menu.html" class="navigation__link">Menu</a>
+                </li>
+                <li class="navigation__item">
+                  <a href="/news.html" class="navigation__link">News</a>
+                </li>
+                <li class="navigation__item">
+                  <a href="/contact.html" class="navigation__link">Contact</a>
+                </li>
+                <li class="navigation__item">
+                  <a
+                    href="/reservation.html"
+                    class="navigation__link navigation__link--button"
+                    >Reservation</a
+                  >
+                </li>
+                <li class="navigation__item">
+                  <ul class="lang-switcher">
+                    <li class="lang-switcher__item">
+                      <a href="#" class="lang-switcher__link">中</a>
+                    </li>
+                    <li class="lang-switcher__item">
+                      <a href="#" class="lang-switcher__link">EN</a>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </header>
+    <!-- Header End -->
+
+    <main>
+      <!-- Page Heading Start -->
+      <h1 class="page-heading page-heading--news">
+        <span>Menu</span>
+      </h1>
+      <!-- Page Heading End -->
+      <div class="container container--small">
+        <!-- Page Description Start -->
+        <div class="page-description">
+          <p>
+            Here you will find small and medium-sized portions of Tapas. All
+            dishes have been designed to share with your friends and be able to
+            taste a greater variety of flavours and textures. We could explain
+            the history of tapas but the intention is to give you the
+            opportunity to taste authentic Spanish cuisine in small portions so
+            you can have fun exploring traditional and authentic Spanish
+            flavours.
+          </p>
+          <p>
+            Don’t hesitate to ask any one of us for advice, how to choose and
+            pair with your wine, beer or Sangria, or to request something
+            special from Chef Costa.
+          </p>
+        </div>
+        <!-- Page Description End -->
+
+        <!-- Menu Taps Start -->
+        <div class="taps">
+          <div class="tap">
+            <div class="tap__inner">
+              <h2 class="tap__title">To Begin with</h2>
+              <a href="#0" class="button button--outline tap__button"
+                >View Menu</a
+              >
+            </div>
+            <div class="tap__image">
+              <img
+                src="images/menu--1.jpg"
+                width="490"
+                height="414"
+                alt="To Begin with"
+              />
+            </div>
+            <div class="tap-content">
+              <h3 class="tap-content__title"><span>Starters</span></h3>
+              <ul class="tap-list">
+                <li class="tap-list__item">
+                  <h4 class="tap-list__name">Olivas</h4>
+                  <span class="tap-list__description">Olives</span>
+                </li>
+
+                <li class="tap-list__item">
+                  <h4 class="tap-list__name">Jamón Ibérico puro de bellota</h4>
+                  <span class="tap-list__description"
+                    >Platter of thinly sliced acorn-fed Iberico Ham “48 months
+                    cured”
+                  </span>
+                </li>
+
+                <li class="tap-list__item">
+                  <h4 class="tap-list__name">Jamón Ibérico de campo</h4>
+                  <span class="tap-list__description"
+                    >Iberico Mountain Ham 36 months cured</span
+                  >
+                </li>
+
+                <li class="tap-list__item">
+                  <h4 class="tap-list__name">
+                    Pan con tomate y aceite de oliva
+                  </h4>
+                  <span class="tap-list__description"
+                    >Tomato bread, special Catalan coca with olive oil and
+                    tomato</span
+                  >
+                </li>
+
+                <li class="tap-list__item">
+                  <h4 class="tap-list__name">
+                    Queso Manchego con membrillo y boquerones con ajo y vinagre
+                  </h4>
+                  <span class="tap-list__description"
+                    >Spanish Manchego cheese, quince & garlic anchovies
+                  </span>
+                </li>
+
+                <li class="tap-list__item">
+                  <h4 class="tap-list__name">Ensalada de Bacalao</h4>
+                  <span class="tap-list__description"
+                    >Cod fish salad with orange and pomegranate dressing
+                  </span>
+                </li>
+
+                <li class="tap-list__item">
+                  <h4 class="tap-list__name">Bikini de jamón y trufa</h4>
+                  <span class="tap-list__description"
+                    >Spanish Ibérico ham & truffle toasted sandwich
+                  </span>
+                </li>
+
+                <li class="tap-list__item">
+                  <h4 class="tap-list__name">
+                    Ensalada de verduras al horno con piñones, alcachofas y
+                    romesco
+                  </h4>
+                  <span class="tap-list__description"
+                    >Roast vegetable salad with pine nuts, artichokes and
+                    Romesco dressing
+                  </span>
+                </li>
+
+                <li class="tap-list__item">
+                  <h4 class="tap-list__name">
+                    Montaditos de Salmon marinado por Hector con berenjena
+                  </h4>
+                  <span class="tap-list__description"
+                    >Chef’s house-marinated Salmon with roasted aubergine
+                  </span>
+                </li>
+
+                <li class="tap-list__item">
+                  <h4 class="tap-list__name">
+                    Sopa cremosa de puerro y vieiras
+                  </h4>
+                  <span class="tap-list__description"
+                    >Creamy leek soup with scallops
+                  </span>
+                </li>
+
+                <li class="tap-list__item">
+                  <h4 class="tap-list__name">
+                    Las croquetas de la abuela con pollo y jamón
+                  </h4>
+                  <span class="tap-list__description"
+                    >Classic creamy Spanish croquettes with ham & chicken</span
+                  >
+                </li>
+
+                <li class="tap-list__item">
+                  <h4 class="tap-list__name">
+                    Huevo frito con patata y Chorizo casero
+                  </h4>
+                  <span class="tap-list__description"
+                    >Fried egg with potato & home-made Chorizo
+                  </span>
+                </li>
+
+                <li class="tap-list__item">
+                  <h4 class="tap-list__name">
+                    Calamares a la malagueña con alioli
+                  </h4>
+                  <span class="tap-list__description"
+                    >Crispy fresh squid with aioli sauce
+                  </span>
+                </li>
+
+                <li class="tap-list__item">
+                  <h4 class="tap-list__name">
+                    Calamares a la plancha salteados con champiñones y jamón
+                  </h4>
+                  <span class="tap-list__description"
+                    >Pan-fried squid with mushrooms & Ibérico ham</span
+                  >
+                </li>
+
+                <li class="tap-list__item">
+                  <h4 class="tap-list__name">
+                    Patatas gratinadas con Morcilla y Brie
+                  </h4>
+                  <span class="tap-list__description"
+                    >Gratin potatoes with Black pudding & Brie</span
+                  >
+                </li>
+
+                <li class="tap-list__item">
+                  <h4 class="tap-list__name">Mil hojas de Foigrass</h4>
+                  <span class="tap-list__description"
+                    >Bites of millefeuille de foie gras</span
+                  >
+                </li>
+
+                <li class="tap-list__item">
+                  <h4 class="tap-list__name">
+                    Alcachofas con champiñones, jamón y huevo crujiente
+                  </h4>
+                  <span class="tap-list__description"
+                    >Crispy artichoke slices with mushroom ,Ibérico ham and
+                    crispy egg</span
+                  >
+                </li>
+
+                <li class="tap-list__item">
+                  <h4 class="tap-list__name">Canelones trufados</h4>
+                  <span class="tap-list__description"
+                    >Catalan truffled Cannelloni
+                  </span>
+                </li>
+
+                <li class="tap-list__item">
+                  <h4 class="tap-list__name">
+                    Alitas de pollo al horno con salsa de patatas bravas
+                  </h4>
+                  <span class="tap-list__description"
+                    >Roasted chicken wings with spicy “Bravas” sauce
+                  </span>
+                </li>
+
+                <li class="tap-list__item">
+                  <h4 class="tap-list__name">
+                    Pinchos Morunos con patatas paja
+                  </h4>
+                  <span class="tap-list__description"
+                    >¨Marinated Iberico pork skewers with straw potato
+                  </span>
+                </li>
+              </ul>
+              <div class="row">
+                <div class="col col--auto mb-1">
+                  <a href="#0" class="button button--outline_base"
+                    >Book a Table</a
+                  >
+                </div>
+                <div class="col col--auto">
+                  <a href="#0" class="button button--outline_base"
+                    >Close Menu</a
+                  >
+                </div>
               </div>
             </div>
-            <div class="col col--auto">
-              <button class="burger burger--js">
-                <span class="burger__line"></span>
-                <span class="burger__line"></span>
-                <span class="burger__line"></span>
-                <span class="burger__line"></span>
-              </button>
-              <nav class="navigation navigation--js">
-                <ul class="navigation__list">
-                  <li class="navigation__item">
-                    <a href="/" class="navigation__link">Home</a>
-                  </li>
-                  <li class="navigation__item">
-                    <a href="/about.html" class="navigation__link">About Us</a>
-                  </li>
-                  <li class="navigation__item">
-                    <a href="/menu.html" class="navigation__link">Menu</a>
-                  </li>
-                  <li class="navigation__item">
-                    <a href="/news.html" class="navigation__link">News</a>
-                  </li>
-                  <li class="navigation__item">
-                    <a href="/contact.html" class="navigation__link">Contact</a>
-                  </li>
-                  <li class="navigation__item">
-                    <a
-                      href="/reservation.html"
-                      class="navigation__link navigation__link--button"
-                      >Reservation</a
-                    >
-                  </li>
-                  <li class="navigation__item">
-                    <ul class="lang-switcher">
-                      <li class="lang-switcher__item">
-                        <a href="#" class="lang-switcher__link">中</a>
-                      </li>
-                      <li class="lang-switcher__item">
-                        <a href="#" class="lang-switcher__link">EN</a>
-                      </li>
-                    </ul>
-                  </li>
-                </ul>
-              </nav>
+          </div>
+          <div class="tap tap--yellow">
+            <div class="tap__inner">
+              <h2 class="tap__title">To Continue Savouring</h2>
+              <a href="#0" class="button button--outline tap__button"
+                >View Menu</a
+              >
+            </div>
+            <div class="tap__image">
+              <img
+                src="images/menu--2.jpg"
+                width="490"
+                height="414"
+                alt="To Continue Savouring"
+              />
+            </div>
+          </div>
+          <div class="tap tap--light_blue">
+            <div class="tap__inner">
+              <h2 class="tap__title">A Sweet Finish</h2>
+              <a href="#0" class="button button--outline tap__button"
+                >View Menu</a
+              >
+            </div>
+            <div class="tap__image">
+              <img
+                src="images/menu--3.jpg"
+                width="490"
+                height="414"
+                alt="A Sweet Finish"
+              />
             </div>
           </div>
         </div>
-      </header>
-      <!-- Header End -->
+        <!-- Menu Taps End -->
+        <div class="row row--justify_center">
+          <div class="col col--auto mb-1">
+            <a href="#0" class="button button--outline_base">View PDF Menu</a>
+          </div>
+          <div class="col col--auto">
+            <a href="#0" class="button button--outline_base">View Wine Menu</a>
+          </div>
+        </div>
+      </div>
+    </main>
 
-      <!-- Promo Content Start -->
-      <div class="container">
-        <div class="promo__content">
-          <div class="promo__logo">
-            <img
+    <!-- Footer Start -->
+    <footer class="footer">
+      <div class="container container--fluid">
+        <div class="footer__heading">
+          <div class="footer__logo">
+            <svg
+              class="inline-svg"
               src="images/logo--white.svg"
               width="614"
               height="282"
               alt="Barcelona Logo"
-            />
-          </div>
-          <a href="/menu.html" class="button button--xl button--blue"
-            >View Menu</a
-          >
-        </div>
-      </div>
-      <!-- Promo Content End -->
-    </div>
-    <!-- Promo End -->
-
-    <main class="container">
-      <!-- Welcome Start -->
-      <div class="welcome">
-        <article class="welcome__article">
-          <div class="welcome__image">
-            <img
-              src="images/welcome--1.jpg"
-              width="400"
-              height="400"
-              alt="Welcome"
-            />
-          </div>
-          <div class="welcome__inner">
-            <h2 class="welcome__title">Welcome</h2>
-            <p class="welcome__text">
-              BarCelona Tapas & Rice is the first genuine and Authentic Spanish
-              Gastro Bar in Macau. Our menu is made of small and medium size
-              portions of Tapas, all of which were specially designed for
-              sharing in order to enable our Guests to experience a greater
-              variety of flavours, colours and textures!
-            </p>
-            <a href="#" class="button button__outline">Read More</a>
-          </div>
-        </article>
-        <article class="welcome__article">
-          <div class="welcome__image">
-            <img
-              src="images/welcome--2.jpg"
-              width="400"
-              height="400"
-              alt="Contact Us"
-            />
-          </div>
-          <div class="welcome__inner">
-            <h2 class="welcome__title">Contact Us</h2>
-            <p class="welcome__text">
-              Opening Hours: <br />
-              Monday – Friday 17:00 – 02:00 <br />
-              Saturday & Sunday 12:00 – 02:00
-            </p>
-            <p>
-              Address: Rua de Venceslau de Morais, No 16, Macau<br />
-              Phone:
-              <a href="tel:+85328721084" title="Call Us">+853 2872 1084</a
-              ><br />
-              Email:
-              <a href="mailto:" title="Mail Us">info@barcelonagastrobar.com</a>
-            </p>
-          </div>
-        </article>
-      </div>
-      <!-- Welcome End -->
-
-      <!-- News Start -->
-      <section class="news">
-        <h2 class="news__title">News</h2>
-        <div class="news__row">
-          <div class="news__article">
-            <a href="#0" class="news__tumbnail">
-              <img
-                src="#"
-                width="470"
-                height="326"
-                alt="BARCELONA TAPAS & RICE BREAK"
-              />
-            </a>
-            <div class="news__meta">2019-07-13</div>
-            <h3 class="news__title">Barcelona Tapas & Rice Break</h3>
-          </div>
-          <div class="news__article">
-            <a href="#0" class="news__tumbnail">
-              <img
-                src="#"
-                width="470"
-                height="326"
-                alt="50% OFF IN OUR SPANISH IBERICO HAM *MAY2018"
-              />
-            </a>
-            <div class="news__meta">2019-07-13</div>
-            <h3 class="news__title">
-              50% Off In Our Spanish Iberico Ham *May2018
-            </h3>
+            ></svg>
           </div>
         </div>
-      </section>
-      <!-- News End -->
-    </main>
-
-    <!-- Follow Start -->
-    <section class="follow">
-      <div class="container">
-        <h2 class="follow__title">Follow us to Find Out More!</h2>
-        <ul class="social">
-          <li class="social__item">
-            <a href="#" class="social__link" title="Facebook"
-              ><i class="icon icon--fb"></i
-            ></a>
-          </li>
-          <li class="social__item">
-            <a href="#" class="social__link" title="Instagram"
-              ><i class="icon icon--instagram"></i
-            ></a>
-          </li>
-          <li class="social__item">
-            <a href="#" class="social__link" title="Dianping"
-              ><i class="icon icon--dianping"></i
-            ></a>
-          </li>
-          <li class="social__item">
-            <a href="#" class="social__link" title="TripAdvisor"
-              ><i class="icon icon--tripadvisor"></i
-            ></a>
-          </li>
-        </ul>
       </div>
-    </section>
-    <!-- Follow End -->
-
-    <!-- Footer Start -->
-    <footer class="footer">
-      <div class="footer__heading">
-        <div class="footer__logo">
-          <img src="" alt="Barcelona logo" class="logo" />
-        </div>
-      </div>
-      <div class="container">
-        <div class="contacts">
+      <div class="container container--small">
+        <div class="contacts row--justify_between">
           <div class="contacts__col">
             <h3 class="contacts__title">Operation Hours</h3>
             <p class="contacts__info">
-              Monday – Friday 17:00 – 01:00 Saturday & Sunday 12:00 – 01:00
+              Monday – Friday 17:00 – 01:00<br />
+              Saturday & Sunday 12:00 – 01:00
             </p>
           </div>
           <div class="contacts__col">
@@ -255,36 +404,82 @@
           </div>
         </div>
 
-        <div class="footer__row">
-          <div class="footer__col">
-            <ul class="social">
+        <div class="row row--justify_between">
+          <div class="col footer__col">
+            <ul class="footer__social social social--xs">
               <li class="social__item">
-                <a href="#" class="social__link" title="Facebook"
-                  ><i class="icon icon--fb"></i
-                ></a>
+                <a
+                  href="#"
+                  class="social__icon social__icon--fb"
+                  title="Facebook"
+                >
+                  <svg
+                    class="inline-svg"
+                    src="images/social__icon--fb.svg"
+                    width="28"
+                    height="55"
+                    alt="Facebook"
+                  ></svg>
+                </a>
               </li>
               <li class="social__item">
-                <a href="#" class="social__link" title="Instagram"
-                  ><i class="icon icon--instagram"></i
-                ></a>
+                <a
+                  href="#"
+                  class="social__icon social__icon--instagram"
+                  title="Instagram"
+                >
+                  <svg
+                    class="inline-svg"
+                    src="images/social__icon--instagram.svg"
+                    width="52"
+                    height="54"
+                    alt="Instagram"
+                  ></svg>
+                </a>
               </li>
               <li class="social__item">
-                <a href="#" class="social__link" title="Dianping"
-                  ><i class="icon icon--dianping"></i
-                ></a>
+                <a
+                  href="#"
+                  class="social__icon social__icon--dianping"
+                  title="Dianping"
+                >
+                  <svg
+                    class="inline-svg"
+                    src="images/social__icon--dianping.svg"
+                    width="60"
+                    height="64"
+                    alt="Dianping"
+                  ></svg>
+                </a>
               </li>
               <li class="social__item">
-                <a href="#" class="social__link" title="TripAdvisor"
-                  ><i class="icon icon--tripadvisor"></i
-                ></a>
+                <a
+                  href="#"
+                  class="social__icon social__icon--tripadvisor"
+                  title="TripAdvisor"
+                >
+                  <svg
+                    class="inline-svg"
+                    src="images/social__icon--trip.svg"
+                    width="68"
+                    height="43"
+                    alt="TripAdvisor"
+                  ></svg>
+                </a>
               </li>
             </ul>
             <small class="copy">
               &copy;2018 Barcelona Tapas & Rice | All rights reserved
             </small>
           </div>
-          <div class="footer__col">
-            <img src="#" width="180" height="75" alt="Taipa Village" />
+          <div class="col footer__col">
+            <img
+              class="taipa-img"
+              src="images/taipa.svg"
+              width="180"
+              height="75"
+              alt="Taipa Village"
+            />
           </div>
         </div>
       </div>

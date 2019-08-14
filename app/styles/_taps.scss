@@ -1,0 +1,139 @@
+.taps {
+  margin-bottom: rem-px(2 * $container-padding-x);
+}
+
+.tap {
+  display: flex;
+  flex-wrap: wrap;
+  background: $blue;
+
+  &:nth-child(even) {
+    .tap__inner {
+      order: 2;
+    }
+  }
+
+  &__inner {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+    padding: rem-px($container-padding-x);
+    width: 60%;
+  }
+
+  &__title {
+    width: 100%;
+    font-family: $accentFont;
+    @include font-rem-px(30);
+    line-height: 1em;
+    color: #fff;
+    text-align: center;
+    margin-bottom: 0.5em;
+  }
+
+  &__image {
+    width: 40%;
+    line-height: 0;
+    overflow: hidden;
+
+    img {
+      height: 180px;
+      width: auto;
+    }
+  }
+
+  &__button {
+    border-width: 2px;
+  }
+
+  &-content {
+    width: 100%;
+    padding: rem-px(2 * $container-padding-x);
+    border: rem-px(10) solid $blue;
+    background: #fff;
+
+    &__title {
+      margin: 0 0 0.8em;
+      position: relative;
+      color: $blue;
+      font-family: $accentFont;
+      @include font-rem-px(36);
+      line-height: 1em;
+      &::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: rem-px(12);
+        border: 1px dashed $blue;
+      }
+
+      span {
+        position: relative;
+        z-index: 2;
+        background: #fff;
+        padding-right: rem-px(10);
+      }
+    }
+  }
+
+  &-list {
+    margin: 0 0 rem-px(2 * $container-padding-x);
+    padding: 0;
+    list-style: none;
+    &__item {
+      margin-bottom: 1.75em;
+    }
+    &__name {
+      @include font-rem-px(15);
+      margin: 0 0 0.2em;
+      font-weight: 700;
+    }
+    &__description {
+      font-style: italic;
+    }
+  }
+
+  &--yellow {
+    background: $yellow;
+    .tap__content {
+      border-color: $yellow;
+    }
+
+    .tap__title,
+    .button--outline {
+      color: $textColor;
+    }
+
+    .button--outline {
+      border-color: $textColor;
+    }
+  }
+  &--light_blue {
+    background: $lightBlue;
+    .tap__content {
+      border-color: $lightBlue;
+    }
+  }
+
+  @include media-breakpoint-up(sm) {
+    &__inner,
+    &__image {
+      width: 50%;
+    }
+
+    &__image {
+      img {
+        width: 100%;
+        height: auto;
+      }
+    }
+  }
+
+  @include media-breakpoint-up(md) {
+    &__title {
+      @include font-rem-px(60);
+    }
+  }
+}

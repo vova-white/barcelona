@@ -1,9 +1,6 @@
 .welcome {
   padding: rem-px(80) 0;
 
-  &__article {
-  }
-
   &__image {
     line-height: 0;
   }
@@ -37,6 +34,34 @@
 
     a {
       color: $textColor;
+    }
+  }
+
+  @include media-breakpoint-up(sm) {
+    &__article {
+      display: flex;
+      align-items: flex-end;
+      padding-right: rem-px(70);
+
+      &:nth-child(even) {
+        align-items: flex-start;
+        padding-right: 0;
+        padding-left: rem-px(70);
+
+        .welcome {
+          &__image {
+            order: 2;
+          }
+        }
+      }
+    }
+
+    &__image {
+      width: 400/1014 * 100%;
+    }
+
+    &__inner {
+      width: (100 - 400/1014 * 100) * 1%;
     }
   }
 }

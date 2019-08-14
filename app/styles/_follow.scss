@@ -10,6 +10,12 @@
     font-family: $accentFont;
     @include font-rem-px(30);
     line-height: 1;
+    @include media-breakpoint-up(sm) {
+      @include font-rem-px(50);
+    }
+    @include media-breakpoint-up(md) {
+      @include font-rem-px(60);
+    }
   }
 }
 
@@ -21,6 +27,12 @@
     padding: rem-px($container-padding-x);
     display: inline-block;
     vertical-align: middle;
+    @include media-breakpoint-up(sm) {
+      padding-bottom: 0;
+    }
+    @include media-breakpoint-up(md) {
+      padding: 0 rem-px(1.9 * $container-padding-x);
+    }
   }
 
   &__icon {
@@ -145,6 +157,21 @@
             background: rgba(#00af87, 0.2);
           }
         }
+      }
+    }
+
+    @include media-breakpoint-up(sm) {
+      text-align: left;
+      .social__item {
+        &:first-child {
+          padding-left: 0;
+        }
+      }
+    }
+
+    @include media-breakpoint-up(md) {
+      .social__item {
+        padding: 0 rem-px($container-padding-x * 0.75);
       }
     }
   }

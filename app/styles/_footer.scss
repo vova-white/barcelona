@@ -3,6 +3,9 @@
   background: url(../images/body--top.svg) repeat-x center bottom;
   background-size: auto rem-px(20);
   text-align: center;
+  @include media-breakpoint-up(sm) {
+    text-align: left;
+  }
 
   &__heading {
     margin-bottom: rem-px(30);
@@ -14,6 +17,7 @@
       left: 0;
       right: 0;
       top: 50%;
+      transform: translateY(-1px);
       border-bottom: 1px solid #dfdfdf;
     }
   }
@@ -38,7 +42,25 @@
   }
 
   &__col {
-    padding: 0 0 rem-px(40);
+    flex: 0 0 100%;
+    max-width: 100%;
+    padding-bottom: rem-px(40);
+  }
+
+  @include media-breakpoint-up(sm) {
+    &__col {
+      flex: 0 0 auto;
+      width: auto;
+    }
+    &__social {
+      padding-top: rem-px(6);
+    }
+  }
+  @include media-breakpoint-up(lg) {
+    &__heading::before {
+      left: 60px;
+      right: 60px;
+    }
   }
 }
 
@@ -71,6 +93,27 @@
       color: inherit;
     }
   }
+
+  @include media-breakpoint-up(sm) {
+    &__col {
+      flex: 0 0 50%;
+      max-width: 50%;
+    }
+  }
+  @include media-breakpoint-up(md) {
+    &__col {
+      flex: 0 0 25%;
+      max-width: 25%;
+    }
+  }
+
+  @include media-breakpoint-up(lg) {
+    &__col {
+      flex: 0 0 auto;
+      width: auto;
+      max-width: 100%;
+    }
+  }
 }
 
 .copy {
@@ -81,4 +124,5 @@
 
 .taipa-img {
   max-width: rem-px(180);
+  line-height: 0;
 }

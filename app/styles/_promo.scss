@@ -3,6 +3,7 @@
   min-height: 100vh;
   background: url(../images/promo.jpg) no-repeat 0 50%;
   background-size: cover;
+
   &::before,
   &::after {
     content: '';
@@ -32,15 +33,44 @@
     position: relative;
     z-index: 3;
     text-align: center;
+    padding-top: 75px;
   }
 
   &__logo {
     line-height: 0;
-    padding: 75px 0 rem-px(50);
+    padding: 0 0 rem-px(50);
 
     .inline-svg {
       width: 100%;
       height: auto;
     }
+  }
+
+  @include media-breakpoint-up(sm) {
+    min-height: 375/568 * 100vw;
+    &__content {
+      width: 614/1160 * 100%;
+      padding-top: 0;
+    }
+  }
+
+  @include media-breakpoint-up(md) {
+    min-height: 75vw;
+
+    &__content {
+      padding-top: 130/1124 * 100%;
+    }
+  }
+
+  @include media-breakpoint-up(lg) {
+    min-height: 650/992 * 100vw;
+  }
+  @include media-breakpoint-up(xl) {
+    min-height: 740/1200 * 100vw;
+    max-height: 912px;
+  }
+  @include media-breakpoint-up(xxl) {
+    min-height: 912px;
+    height: 912px;
   }
 }

@@ -3,6 +3,7 @@ $orange: #e8753d;
 $blue: #43558a;
 $yellow: #f9de4f;
 $lightGray: #1f1f1f;
+$lightBlue: #0b96d2;
 
 $basicFont: Helvetica, 'Helvetica Neue', Arial, sans-serif;
 $accentFont: 'BrushScriptStd', serif;
@@ -29,5 +30,6 @@ $grid-breakpoints: (
   sm: 568px,
   md: 768px,
   lg: 992px,
-  xl: 1200px
+  xl: 1200px,
+  xxl: 1400px
 ) !default;

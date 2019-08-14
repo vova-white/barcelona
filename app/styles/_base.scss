@@ -33,18 +33,22 @@ a {
   }
 }
 
-img {
+img,
+svg {
   width: 100%;
   height: auto;
 }
 
 .container {
   width: 100%;
-  max-width: 1124px;
+  max-width: 1200px;
   margin: 0 auto;
   padding: 0 rem-px($container-padding-x);
   &--fluid {
     max-width: 100%;
+  }
+  &--small {
+    max-width: 980 + (2 * $container-padding-x) * 1px;
   }
 }
 
@@ -55,6 +59,12 @@ img {
   margin-left: rem-px(-$container-padding-x);
   &--justify_between {
     justify-content: space-between;
+  }
+  &--flex_end {
+    justify-content: flex-end;
+  }
+  &--justify_center {
+    justify-content: center;
   }
 }
 
@@ -71,4 +81,8 @@ img {
     flex: 0 0 auto;
     width: auto;
   }
+}
+
+.mb-1 {
+  margin-bottom: 1rem;
 }

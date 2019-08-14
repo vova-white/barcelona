@@ -25,12 +25,7 @@
       <!-- Header Start -->
       <header class="header header--home">
         <div class="container container--fluid">
-          <div class="row row--justify_between">
-            <div class="col col--auto">
-              <div class="header__logo">
-                <a href="/" class="logo" title="Barcelona"></a>
-              </div>
-            </div>
+          <div class="row row--flex_end">
             <div class="col col--auto">
               <button class="burger burger--js">
                 <span class="burger__line"></span>
@@ -157,8 +152,8 @@
       <!-- News Start -->
       <section class="news">
         <h2 class="news__heading"><span>News</span></h2>
-        <div class="news__row">
-          <div class="news__article">
+        <div class="news__row row">
+          <div class="news__article col">
             <a href="#0" class="news__tumbnail">
               <img
                 src="images/news--1.jpg"
@@ -172,7 +167,7 @@
               <a href="#0">Barcelona Tapas & Rice Break</a>
             </h3>
           </div>
-          <div class="news__article">
+          <div class="news__article col">
             <a href="#0" class="news__tumbnail">
               <img
                 src="images/news--2.jpg"
@@ -259,7 +254,7 @@
 
     <!-- Footer Start -->
     <footer class="footer">
-      <div class="container">
+      <div class="container container--fluid">
         <div class="footer__heading">
           <div class="footer__logo">
             <svg
@@ -271,8 +266,9 @@
             ></svg>
           </div>
         </div>
-
-        <div class="contacts">
+      </div>
+      <div class="container container--small">
+        <div class="contacts row--justify_between">
           <div class="contacts__col">
             <h3 class="contacts__title">Operation Hours</h3>
             <p class="contacts__info">
@@ -302,8 +298,8 @@
           </div>
         </div>
 
-        <div class="footer__row">
-          <div class="footer__col">
+        <div class="row row--justify_between">
+          <div class="col footer__col">
             <ul class="footer__social social social--xs">
               <li class="social__item">
                 <a
@@ -370,7 +366,7 @@
               &copy;2018 Barcelona Tapas & Rice | All rights reserved
             </small>
           </div>
-          <div class="footer__col">
+          <div class="col footer__col">
             <img
               class="taipa-img"
               src="images/taipa.svg"

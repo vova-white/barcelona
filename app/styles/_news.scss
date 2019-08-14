@@ -26,10 +26,9 @@
     }
   }
 
-  &__row {
-  }
-
   &__article {
+    flex: 0 0 100%;
+    max-width: 100%;
     margin-bottom: rem-px(40);
   }
 
@@ -51,6 +50,18 @@
       &:hover {
         color: darken($orange, 10);
       }
+    }
+  }
+
+  @include media-breakpoint-up(sm) {
+    &__row {
+      margin-left: 0;
+      margin-right: 0;
+    }
+
+    &__article {
+      flex: 0 0 50%;
+      max-width: 50%;
     }
   }
 }
