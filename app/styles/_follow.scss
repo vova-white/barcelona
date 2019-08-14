@@ -3,7 +3,7 @@
   background-size: cover;
   padding: rem-px(80) 0;
   &__title {
-    margin: 0;
+    margin: 0 0 1em;
     text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
     color: #ffffff;
     font-family: $accentFont;
@@ -13,11 +13,18 @@
 }
 
 .social {
+  margin: 0;
+  padding: 0;
+  text-align: center;
   &__item {
+    margin: rem-px($container-padding-x);
+    display: inline-block;
   }
 
   &__icon {
-    display: inline-block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     line-height: 0;
     width: rem-px(97);
     height: rem-px(97);
@@ -25,19 +32,51 @@
     border-radius: 50%;
 
     &--fb {
-      background-color: rgba(#1877f2, 0.9);
+      background: rgba(#1877f2, 0.9);
+      img,
+      svg {
+        width: rem-px(21);
+        height: rem-px(55);
+      }
+      &:hover {
+        background: #1877f2;
+      }
     }
 
     &--instagram {
-      background-color: rgba(#c32aa3, 0.9);
+      background: rgba(#c32aa3, 0.9);
+      img,
+      svg {
+        width: rem-px(52);
+        height: rem-px(54);
+      }
+      &:hover {
+        background: #c32aa3;
+      }
     }
 
     &--dianping {
-      background-color: rgba(#ff6633, 0.9);
+      background: rgba(#ff6633, 0.9);
+      img,
+      svg {
+        width: rem-px(65);
+        height: rem-px(62);
+      }
+      &:hover {
+        background: #ff6633;
+      }
     }
 
     &--tripadvisor {
-      background-color: rgba(#00af87, 0.9);
+      background: rgba(#00af87, 0.9);
+      img,
+      svg {
+        width: rem-px(68);
+        height: rem-px(41);
+      }
+      &:hover {
+        background: #00af87;
+      }
     }
   }
 }
