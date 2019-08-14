@@ -3,6 +3,7 @@
   background-size: cover;
   padding: rem-px(80) 0;
   &__title {
+    text-align: center;
     margin: 0 0 1em;
     text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
     color: #ffffff;
@@ -17,7 +18,7 @@
   padding: 0;
   text-align: center;
   &__item {
-    margin: rem-px($container-padding-x);
+    padding: rem-px($container-padding-x);
     display: inline-block;
     vertical-align: middle;
   }
@@ -32,11 +33,14 @@
     border: 5px solid #ffffff;
     border-radius: 50%;
 
+    .inline-svg {
+      height: auto;
+    }
+
     &--fb {
       background: rgba(#1877f2, 0.9);
       .inline-svg {
-        width: rem-px(21);
-        height: rem-px(55);
+        width: rem-px(28);
       }
       &:hover {
         background: #1877f2;
@@ -47,7 +51,6 @@
       background: rgba(#c32aa3, 0.9);
       .inline-svg {
         width: rem-px(52);
-        height: rem-px(54);
       }
       &:hover {
         background: #c32aa3;
@@ -58,7 +61,6 @@
       background: rgba(#ff6633, 0.9);
       .inline-svg {
         width: rem-px(60);
-        height: rem-px(64);
       }
       &:hover {
         background: #ff6633;
@@ -69,10 +71,80 @@
       background: rgba(#00af87, 0.9);
       .inline-svg {
         width: rem-px(68);
-        height: rem-px(43);
       }
       &:hover {
         background: #00af87;
+      }
+    }
+  }
+
+  &--xs {
+    .social {
+      &__item {
+        padding: 0 rem-px(15);
+      }
+
+      &__icon {
+        width: rem-px(35);
+        height: rem-px(35);
+        border: 1px solid transparent;
+        border-radius: 50%;
+
+        &--fb {
+          border-color: #1877f2;
+          background: transparent;
+          .inline-svg {
+            width: rem-px(28 * 0.37);
+            path {
+              fill: #1877f2;
+            }
+          }
+          &:hover {
+            background: rgba(#1877f2, 0.2);
+          }
+        }
+
+        &--instagram {
+          border-color: #c32aa3;
+          background: transparent;
+          .inline-svg {
+            width: rem-px(52 * 0.37);
+            path {
+              fill: #c32aa3;
+            }
+          }
+          &:hover {
+            background: rgba(#c32aa3, 0.2);
+          }
+        }
+
+        &--dianping {
+          border-color: #ff6633;
+          background: transparent;
+          .inline-svg {
+            width: rem-px(60 * 0.37);
+            path {
+              fill: #ff6633;
+            }
+          }
+          &:hover {
+            background: rgba(#ff6633, 0.2);
+          }
+        }
+
+        &--tripadvisor {
+          border-color: #00af87;
+          background: transparent;
+          .inline-svg {
+            width: rem-px(68 * 0.37);
+            path {
+              fill: #00af87;
+            }
+          }
+          &:hover {
+            background: rgba(#00af87, 0.2);
+          }
+        }
       }
     }
   }

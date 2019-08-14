@@ -132,8 +132,6 @@ const build = series(
 );
 
 function startAppServer() {
-  embedSvgTask();
-
   server.init({
     notify: false,
     port,
@@ -144,6 +142,8 @@ function startAppServer() {
       }
     }
   });
+
+  watch('app/*.html', embedSvgTask);
 
   watch(['app/*.html', 'app/images/**/*', '.tmp/fonts/**/*']).on(
     'change',

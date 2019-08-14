@@ -1,4 +1,84 @@
 .footer {
-  padding-bottom: 20px;
+  padding: rem-px(80) 0 rem-px(20);
   background: url(../images/body--top.svg) repeat-x center bottom;
+  background-size: auto rem-px(20);
+  text-align: center;
+
+  &__heading {
+    margin-bottom: rem-px(30);
+    text-align: center;
+    position: relative;
+    &::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 50%;
+      border-bottom: 1px solid #dfdfdf;
+    }
+  }
+  &__logo {
+    display: inline-block;
+    background: #fff;
+    position: relative;
+    z-index: 3;
+    padding: 0 rem-px(34);
+    .inline-svg {
+      width: 100%;
+      max-width: rem-px(324);
+      height: auto;
+      .logo-b,
+      .logo-word {
+        fill: #3c4c63;
+      }
+    }
+  }
+  &__social {
+    margin-bottom: 1em;
+  }
+
+  &__col {
+    padding: 0 0 rem-px(40);
+  }
+}
+
+.contacts {
+  @extend .row;
+
+  &__col {
+    @extend .col;
+    flex: 0 0 100%;
+    max-width: 100%;
+
+    font-size: 12px;
+    line-height: 17/12 * 1em;
+    margin-bottom: rem-px(30);
+  }
+
+  &__title {
+    margin: 0;
+    font-weight: 600;
+    color: $orange;
+    text-transform: uppercase;
+  }
+
+  &__info {
+    margin: 0;
+    font-weight: 300;
+    color: $lightGray;
+
+    a {
+      color: inherit;
+    }
+  }
+}
+
+.copy {
+  @extend .contacts__info;
+  font-size: 12px;
+  line-height: 17/12 * 1em;
+}
+
+.taipa-img {
+  max-width: rem-px(180);
 }
