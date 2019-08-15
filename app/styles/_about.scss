@@ -1,0 +1,25 @@
+.about {
+  margin-bottom: rem-px(2 * $container-padding-x);
+  &__col {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  &__title {
+    font-family: $accentFont;
+    @include font-rem-px(33);
+    line-height: 60/66 * 1em;
+    text-align: center;
+    margin: 0.5em 0 0.75em;
+  }
+
+  &__text {
+    text-align: center;
+  }
+
+  @include media-breakpoint-up(md) {
+    &__title {
+      @include font-rem-px(66);
+    }
+  }
+}

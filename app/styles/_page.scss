@@ -3,11 +3,13 @@
   padding: rem-px(125 * 0.55) 0 rem-px(100 * 0.55);
   margin: 0 0 rem-px(2 * $container-padding-x);
   text-align: center;
-  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
   color: #ffffff;
   font-family: $accentFont;
   @include font-rem-px(90 * 0.55);
   line-height: 60/90 * 1em;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
   &::before {
     content: '';
     position: absolute;
@@ -22,11 +24,15 @@
     position: relative;
     z-index: 2;
     line-height: 1;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
   }
 
   &--news {
-    background: url(../images/news--bg.jpg) no-repeat center;
-    background-size: cover;
+    background-image: url(../images/news__bg.jpg);
+  }
+
+  &--about {
+    background-image: url(../images/about__bg.jpg);
   }
 
   @include media-breakpoint-up(md) {
