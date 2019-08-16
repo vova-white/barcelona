@@ -1,6 +1,6 @@
 .promo {
   position: relative;
-  min-height: 100vh;
+  min-height: 50vh;
   background: url(../images/promo.jpg) no-repeat 0 50%;
   background-size: cover;
 
@@ -32,11 +32,11 @@
   &__content {
     position: relative;
     z-index: 3;
-    text-align: center;
-    padding-top: 75px;
+    padding-top: 60/320 * 100vw;
   }
 
   &__logo {
+    display: none;
     line-height: 0;
     padding: 0 0 rem-px(50);
 
@@ -47,15 +47,20 @@
   }
 
   @include media-breakpoint-up(sm) {
-    min-height: 375/568 * 100vw;
+    min-height: 350/568 * 100vw;
     &__content {
+      padding-top: 90/568 * 100vw;
       width: 614/1160 * 100%;
-      padding-top: 0;
+      text-align: center;
     }
   }
 
   @include media-breakpoint-up(md) {
     min-height: 75vw;
+
+    &__logo {
+      display: block;
+    }
 
     &__content {
       padding-top: 130/1124 * 100%;

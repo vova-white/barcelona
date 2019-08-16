@@ -138,6 +138,14 @@
     .button--outline {
       border-color: $textColor;
     }
+
+    .button--outline_base {
+      &:hover {
+        color: #fff;
+        background: $orange;
+        border-color: orange;
+      }
+    }
   }
   &--light_blue {
     background: $lightBlue;
