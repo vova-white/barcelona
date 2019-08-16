@@ -43,6 +43,10 @@
     background-image: url(../images/contact__bg.jpg);
   }
 
+  &--reservation {
+    background-image: url(../images/reservation__bg.jpg);
+  }
+
   @include media-breakpoint-up(md) {
     padding: rem-px(125) 0 rem-px(100);
     @include font-rem-px(90);

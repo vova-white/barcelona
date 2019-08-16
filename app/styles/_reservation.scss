@@ -1,0 +1,41 @@
+.reservation {
+  margin: 0 0 rem-px(2 * $container-padding-x);
+  &__col {
+    flex: 0 0 100%;
+    max-width: 100%;
+    &--xl {
+      padding-bottom: rem-px(2 * $container-padding-x);
+    }
+  }
+
+  &__widget {
+    text-align: center;
+    h3 {
+      margin-top: 0;
+    }
+  }
+
+  @include media-breakpoint-up(sm) {
+    margin-top: rem-px(4 * $container-padding-x);
+    &__col {
+      flex: 0 0 50%;
+      max-width: 50%;
+      &--xl {
+        padding-bottom: 0;
+      }
+    }
+  }
+
+  @include media-breakpoint-up(md) {
+    $xlWidth: (620 + 2 * $container-padding-x)/980 * 100%;
+    &__col {
+      flex: 0 0 (100 - $xlWidth);
+      max-width: 100 - $xlWidth;
+
+      &--xl {
+        flex: 0 0 $xlWidth;
+        max-width: $xlWidth;
+      }
+    }
+  }
+}
