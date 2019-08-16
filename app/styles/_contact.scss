@@ -1,0 +1,97 @@
+.contact-page {
+  &__col {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  &__text {
+    @include font-rem-px(18);
+    line-height: 30/18 * 1em;
+    text-align: center;
+
+    p {
+      margin-top: 0;
+    }
+  }
+
+  a {
+    color: $textColor;
+    &:hover {
+      color: $orange;
+    }
+  }
+
+  @include media-breakpoint-up(sm) {
+    justify-content: center;
+    align-items: center;
+    &__col {
+      flex: 0 0 50%;
+      max-width: 50%;
+    }
+
+    &__text {
+      text-align: left;
+    }
+  }
+
+  @include media-breakpoint-up(md) {
+    &__col {
+      flex: 0 0 auto;
+      width: auto;
+    }
+  }
+}
+
+.map-link {
+  display: block;
+  line-height: 0;
+  position: relative;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 5.5%;
+    left: 5.5%;
+    right: 5%;
+    bottom: 4.5%;
+    background: $orange;
+    z-index: 2;
+    border-radius: 50%;
+  }
+
+  span {
+    display: block;
+    width: 80%;
+    top: 50%;
+    left: 50%;
+    text-align: center;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    z-index: 3;
+    font-family: $accentFont;
+    @include font-rem-px(40);
+    line-height: 1.2em;
+    color: #fff;
+    font-weight: 700;
+  }
+
+  &::before,
+  span {
+    opacity: 0;
+    transition: 0.3s ease-in-out;
+  }
+
+  &:hover {
+    span {
+      opacity: 1;
+    }
+    &::before {
+      opacity: 0.6;
+    }
+  }
+
+  img {
+    position: relative;
+    z-index: 1;
+  }
+}

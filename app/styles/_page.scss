@@ -31,12 +31,16 @@
     background-image: url(../images/menu__bg.jpg);
   }
 
+  &--about {
+    background-image: url(../images/about__bg.jpg);
+  }
+
   &--news {
     background-image: url(../images/news__bg.jpg);
   }
 
-  &--about {
-    background-image: url(../images/about__bg.jpg);
+  &--contact {
+    background-image: url(../images/contact__bg.jpg);
   }
 
   @include media-breakpoint-up(md) {
