@@ -80,6 +80,7 @@
     padding: rem-px(2 * $container-padding-x);
     border: rem-px(10) solid $blue;
     background: #fff;
+    display: none;
 
     &__title {
       margin: 0 0 0.8em;
@@ -125,7 +126,7 @@
 
   &--yellow {
     background: $yellow;
-    .tap__content {
+    .tap-content {
       border-color: $yellow;
     }
 
@@ -140,7 +141,7 @@
   }
   &--light_blue {
     background: $lightBlue;
-    .tap__content {
+    .tap-content {
       border-color: $lightBlue;
     }
   }
