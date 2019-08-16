@@ -1,5 +1,6 @@
 .news {
   padding-bottom: rem-px(40);
+
   &__heading {
     position: relative;
     margin: 0 0 40/48 * 1em;
@@ -32,6 +33,22 @@
     margin-bottom: rem-px(40);
   }
 
+  &__thumbnail {
+    a {
+      display: block;
+      background: $orange;
+      line-height: 0;
+
+      &:hover img {
+        opacity: 0.5;
+      }
+    }
+
+    img {
+      transition: 0.3s ease-in-out;
+    }
+  }
+
   &__meta {
     color: #b8b8b8;
     @include font-rem-px(16);
@@ -53,6 +70,15 @@
     }
   }
 
+  &--page {
+    .news__title {
+      margin: 0.5em 0;
+    }
+    .news__excerpt {
+      margin: 0.6em 0 0;
+    }
+  }
+
   @include media-breakpoint-up(sm) {
     &__row {
       margin-left: 0;
@@ -62,6 +88,90 @@
     &__article {
       flex: 0 0 50%;
       max-width: 50%;
+    }
+
+    &--page {
+      .news {
+        &__row {
+          margin-right: rem-px(-$container-padding-x);
+          margin-left: rem-px(-$container-padding-x);
+        }
+      }
+    }
+  }
+
+  @include media-breakpoint-up(md) {
+    &__wrapper {
+      padding-top: rem-px(2 * $container-padding-x);
+    }
+    &--page {
+      .news {
+        &__article {
+          display: flex;
+          flex: 0 0 100%;
+          max-width: 100%;
+          margin-bottom: rem-px(4 * $container-padding-x);
+
+          &:last-child {
+            margin-bottom: 0;
+          }
+        }
+
+        &__thumbnail,
+        &__inner {
+          flex: 0 0 50%;
+          max-width: 50%;
+        }
+
+        &__thumbnail {
+          padding-right: rem-px($container-padding-x);
+        }
+
+        &__inner {
+          padding-left: rem-px($container-padding-x);
+        }
+
+        &__title {
+          margin-top: -4px;
+        }
+      }
+    }
+  }
+}
+
+.pagination {
+  margin: rem-px($container-padding-x) 0 rem-px(2 * $container-padding-x);
+  padding: 0;
+  list-style: none;
+  text-align: center;
+
+  &__item {
+    display: inline-block;
+    margin: 0 5px;
+
+    @include media-breakpoint-up(md) {
+      margin: 0;
+    }
+
+    a {
+      color: $textColor;
+      padding: 0.25em 0.5em;
+
+      &:hover {
+        color: $orange;
+      }
+    }
+
+    &--is_active {
+      a {
+        border-radius: 3px;
+        color: #fff;
+        background: $orange;
+
+        &:hover {
+          color: #fff;
+        }
+      }
     }
   }
 }
