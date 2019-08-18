@@ -26,7 +26,7 @@
       <header class="header header--home">
         <div class="container container--fluid">
           <div class="row row--justify_between header__row">
-            <div class="col col--auto header__logo">
+            <div class="col col--auto header__logo from-left">
               <a href="/" title="Barcelona">
                 <svg
                   class="inline-svg"
@@ -37,7 +37,7 @@
                 ></svg>
               </a>
             </div>
-            <div class="col col--auto">
+            <div class="col col--auto from-right">
               <button class="burger burger--js">
                 <span class="burger__line"></span>
                 <span class="burger__line"></span>
@@ -88,7 +88,7 @@
 
       <!-- Promo Content Start -->
       <div class="container">
-        <div class="promo__content">
+        <div class="promo__content from-bottom">
           <div class="promo__logo">
             <svg
               class="inline-svg"
@@ -110,7 +110,7 @@
     <main class="container">
       <!-- Welcome Start -->
       <div class="welcome">
-        <article class="welcome__article">
+        <article class="welcome__article from-left">
           <div class="welcome__image">
             <img
               src="images/welcome--1.jpg"
@@ -131,7 +131,7 @@
             <a href="#" class="button button--outline">Read More</a>
           </div>
         </article>
-        <article class="welcome__article">
+        <article class="welcome__article from-right">
           <div class="welcome__image">
             <img
               src="images/welcome--2.jpg"
@@ -162,9 +162,9 @@
 
       <!-- News Start -->
       <section class="news">
-        <h2 class="news__heading"><span>News</span></h2>
+        <h2 class="news__heading from-top"><span>News</span></h2>
         <div class="news__row row">
-          <div class="news__article col">
+          <div class="news__article col from-left">
             <div class="news__thumbnail">
               <a href="#0">
                 <img
@@ -181,7 +181,7 @@
               <a href="#0">Barcelona Tapas & Rice Break</a>
             </h3>
           </div>
-          <div class="news__article col">
+          <div class="news__article col from-right">
             <div class="news__thumbnail">
               <a href="#0">
                 <img
@@ -206,9 +206,9 @@
     <!-- Follow Start -->
     <section class="follow">
       <div class="container">
-        <h2 class="follow__title">Follow us to Find Out More!</h2>
+        <h2 class="follow__title from-top">Follow us to Find Out More!</h2>
         <ul class="social">
-          <li class="social__item">
+          <li class="social__item from-bottom">
             <a href="#" class="social__icon social__icon--fb" title="Facebook">
               <svg
                 class="inline-svg"
@@ -219,7 +219,7 @@
               ></svg>
             </a>
           </li>
-          <li class="social__item">
+          <li class="social__item from-bottom_50">
             <a
               href="#"
               class="social__icon social__icon--instagram"
@@ -234,7 +234,7 @@
               ></svg>
             </a>
           </li>
-          <li class="social__item">
+          <li class="social__item from-bottom_100">
             <a
               href="#"
               class="social__icon social__icon--dianping"
@@ -249,7 +249,7 @@
               ></svg>
             </a>
           </li>
-          <li class="social__item">
+          <li class="social__item from-bottom_150">
             <a
               href="#"
               class="social__icon social__icon--tripadvisor"
@@ -272,7 +272,7 @@
     <!-- Footer Start -->
     <footer class="footer">
       <div class="container container--fluid">
-        <div class="footer__heading">
+        <div class="footer__heading from-top">
           <div class="footer__logo">
             <svg
               class="inline-svg"
@@ -286,20 +286,20 @@
       </div>
       <div class="container container--small">
         <div class="contacts row--justify_between">
-          <div class="contacts__col">
+          <div class="contacts__col from-bottom">
             <h3 class="contacts__title">Operation Hours</h3>
             <p class="contacts__info">
               Monday – Friday 17:00 – 01:00<br />
               Saturday & Sunday 12:00 – 01:00
             </p>
           </div>
-          <div class="contacts__col">
+          <div class="contacts__col from-bottom">
             <h3 class="contacts__title">Tel</h3>
             <p class="contacts__info">
               <a href="tel:+85328721084">+853 2872 1084 </a>
             </p>
           </div>
-          <div class="contacts__col">
+          <div class="contacts__col from-bottom">
             <h3 class="contacts__title">Email</h3>
             <p class="contacts__info">
               <a href="mailto:info@barcelonagastrobar.com"
@@ -307,7 +307,7 @@
               >
             </p>
           </div>
-          <div class="contacts__col">
+          <div class="contacts__col from-bottom">
             <h3 class="contacts__title">ADDRESS</h3>
             <p class="contacts__info">
               Rua de Venceslau de Morais,  No 16, Macau
@@ -417,6 +417,7 @@
     <!-- build:js scripts/vendor.js -->
     <script src="/node_modules/jquery/dist/jquery.min.js"></script>
     <!-- endbuild -->
+    <script src="https://unpkg.com/scrollreveal@4.0.0/dist/scrollreveal.min.js"></script>
     <!-- build:js scripts/main.js -->
     <script src="scripts/main.js"></script>
     <!-- endbuild -->

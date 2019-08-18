@@ -5,13 +5,13 @@
 .tap {
   display: flex;
   flex-wrap: wrap;
-  background: $blue;
 
   &__inner {
     display: flex;
     flex-wrap: wrap;
     align-content: center;
     justify-content: center;
+    background: $blue;
     padding: rem-px($container-padding-x);
     width: 100%;
 
@@ -125,7 +125,9 @@
   }
 
   &--yellow {
-    background: $yellow;
+    .tap__inner {
+      background: $yellow;
+    }
     .tap-content {
       border-color: $yellow;
     }
@@ -145,7 +147,9 @@
     }
   }
   &--light_blue {
-    background: $lightBlue;
+    .tap__inner {
+      background: $lightBlue;
+    }
     .tap-content {
       border-color: $lightBlue;
     }

@@ -86,3 +86,14 @@ svg {
 .mb-1 {
   margin-bottom: 1rem;
 }
+
+.from-left,
+.from-right,
+.from-top,
+.from-bottom,
+.from-bottom_50,
+.from-bottom_100,
+.from-bottom_150,
+.from-bottom_long {
+  visibility: hidden;
+}
